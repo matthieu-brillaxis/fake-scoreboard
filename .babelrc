@@ -1,0 +1,29 @@
+{
+  "presets": [
+    "@babel/preset-flow",
+    "@babel/env",
+    "@babel/react"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./src"
+        ],
+        "alias": {
+          "assets": "./assets",
+          "containers": "./containers",
+          "components": "./components",
+          "fragments": "./components/fragments",
+          "types": "./types",
+          "actions": "./actions",
+          "reducers": "./reducers",
+          "constants": "./constants",
+          "sagas": "./sagas",
+          "utils": "./utils"
+        }
+      }
+    ]
+  ]
+}

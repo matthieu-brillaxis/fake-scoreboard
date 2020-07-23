@@ -1,0 +1,17 @@
+.match-opponents-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  .versus {
+    margin-right: 27px;
+    margin-left: 27px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

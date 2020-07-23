@@ -1,0 +1,22 @@
+@import "constants/colors";
+
+.team-container {
+  display: flex;
+  flex-direction: row;
+  flex: 5;
+  background-color: $LIGHT_GREY;
+  height: 41px;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+
+  p {
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}
