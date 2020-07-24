@@ -1,6 +1,6 @@
 // @flow
 
-import type { LolTeamStats, GoldsTypes, GoldsItemTypes } from 'types/dataTypes';
+import type { GoldsTypes, GoldsItemTypes } from 'types/dataTypes';
 
 export const formatTimer = (timer: number) => {
   const minutes = Math.floor(timer / 60);
@@ -12,8 +12,8 @@ export const formatTimer = (timer: number) => {
 export const formatGold = (
   currentGold: GoldsTypes,
   timer: number,
-  blue: LolTeamStats,
-  red: LolTeamStats,
+  redGold: number,
+  blueGold: number,
 ) => currentGold.map<GoldsItemTypes>((item) => {
   const { name, data, type } = item;
 
@@ -22,7 +22,7 @@ export const formatGold = (
     type,
     data: {
       ...data,
-      [formatTimer(timer)]: type === 'blue' ? blue : red,
+      [formatTimer(timer)]: type === 'blue' ? blueGold : redGold,
     },
   };
 });
